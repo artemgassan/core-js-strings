@@ -434,8 +434,10 @@ function getStringFromTemplate(firstName, lastName) {
  *   extractNameFromTemplate('Hello, John Doe!') => 'John Doe'
  *   extractNameFromTemplate('Hello, Chuck Norris!') => 'Chuck Norris'
  */
-function extractNameFromTemplate(/* value */) {
-  throw new Error('Not implemented');
+function extractNameFromTemplate(value) {
+  const fistCharName = value.slice(7);
+  const secondCharName = fistCharName.indexOf('!');
+  return fistCharName.slice(0, secondCharName);
 }
 
 /**
